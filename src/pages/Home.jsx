@@ -49,7 +49,7 @@ const Home = () => {
         const search = searchValue ? `search=${searchValue}` : ``;
 
         // fetch(
-        //     `https://65b64609da3a3c16ab007957.mockapi.io/items?${category}&${search}&sortBy=${sortBy}&order=${order}&limit=4&page=${page}`
+        //     `/items?${category}&${search}&sortBy=${sortBy}&order=${order}&limit=4&page=${page}`
         // )
         //     .then((res) => res.json())
         //     .then((arr) => {
@@ -59,7 +59,7 @@ const Home = () => {
 
         axios
             .get(
-                `https://65b64609da3a3c16ab007957.mockapi.io/items?${category}&${search}&sortBy=${sortBy}&order=${order}&limit=4&page=${currentPage}`
+                `/items?${category}&${search}&sortBy=${sortBy}&order=${order}&limit=4&page=${currentPage}`
             )
             .then((res) => {
                 setItems(res.data);
